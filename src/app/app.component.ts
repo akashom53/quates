@@ -13,6 +13,7 @@ export class AppComponent {
   chapter = '';
   verse = '';
   quote = '';
+  book = '';
   quotes: Observable<any[]>;
 
   constructor(public db: AngularFireDatabase) {
@@ -24,9 +25,11 @@ export class AppComponent {
       chapter: this.chapter,
       verse: this.verse,
       quote: this.quote,
+      book: this.book,
     });
     this.chapter = '';
     this.verse = '';
     this.quote = '';
+    this.book = '';
   }
 }

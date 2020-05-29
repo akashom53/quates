@@ -7,6 +7,18 @@
     <div class="quotes-form">
       <form (ngSubmit)="onSubmit()">
         <div class="form-group">
+          <label for="item">Book</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Book"
+            id="item"
+            required
+            [(ngModel)]="book"
+            name="chapter"
+          />
+        </div>
+        <div class="form-group">
           <label for="item">Chapter</label>
           <input
             type="text"
@@ -55,6 +67,7 @@
       <table class="table table-dark">
         <thead>
           <tr>
+            <th>Book</th>
             <th>Chapter</th>
             <th>Verse</th>
             <th scope="col">Quote</th>
@@ -62,7 +75,8 @@
         </thead>
         <tbody>
           <tr *ngFor="let item of quotes | async">
-            <td scope="row">{{item.chapter}}</td>
+            <td scope="row">{{item.book}}</td>
+            <td >{{item.chapter}}</td>
             <td>{{item.verse}}</td>
             <td>{{item.quote}}</td>
           </tr>
