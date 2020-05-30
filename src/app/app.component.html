@@ -1,6 +1,7 @@
 <div class="container-fluid">
   <div style="color: blue;">
     <h1>{{ title }}</h1>
+    <p>Total Entries: {{ (quotes | async).length }}</p>
   </div>
 
   <div class="container-main">
