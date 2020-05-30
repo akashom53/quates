@@ -74,7 +74,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of quotes | async">
+          <tr *ngFor="let item of (quotes | async).reverse()">
             <td scope="row">{{item.book}}</td>
             <td >{{item.chapter}}</td>
             <td>{{item.verse}}</td>
